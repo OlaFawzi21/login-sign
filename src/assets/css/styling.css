@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #b9c7b9;
+}
+
+.container {
+    height: 675px;
+}
+
+.container .row {
+    height: inherit;
+    box-shadow: 0 0 15px 5px rgb(96 138 92 / 30%);
+    border-radius: 12px;
+    display: flex;
+}
+
+.container .row .login {
+    background-color: #f9fcf8;
+    border-radius: 12px 0 0 12px;
+    width: 50%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .row .back-img {
+    background-color: #d6e6d5;
+    border-radius: 0 12px 12px 0;
+    width: 50%;
+    padding: 0 15px;
+    position: relative;
+}
+
+.container .row .login .logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 35%;
+    margin: 20px 0 0 0;
+}
+
+.container .row .login .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.container .row .login .logo h3 {
+    color: #2c494f;
+    margin-bottom: 0;
+}
+
+.container .row .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .row .login .content {
+    height: 530px;
+}
+
+
+.container .row .signup .content {
+    height: 560px;
+}
+
+.container .row .text {
+    text-align: center;
+    color: #2c494f;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+
+.container .row .back-img .text {
+    position: relative;
+    margin-top: 185px;
+    z-index: 1;
+}
+
+.container .row p {
+    font-size: 14px;
+}
+
+.container .row .login .content .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+
+}
+::placeholder {
+    color: #608a5c;
+    font-size: 11px;
+}
+
+.container .row .login .content .inputs .form-control {
+    border-radius: 8px;
+    border: 0.5px solid #b9c7b9;
+    margin-bottom: 15px;
+    color: #608a5c;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgb(96, 138, 92, 30%);
+}
+
+.form-control.is-invalid:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(251, 5, 5, 50%);
+}
+
+.container .row .login .content .inputs .submit {
+    background-color: #466443;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    padding: 8px;
+}
+
+.container .row .login .content .inputs .submit:hover {
+    box-shadow: 0 0 6px rgb(185 199 185 / 50%);
+    background-color: #465745;
+}
+
+.container .row .login .content .inputs .submit:active {
+    background-color: #608a5c;
+}
+
+.container .row .login .content .inputs label,
+.container .row a {
+    font-size: 14px;
+    color: #2c494f;
+    font-weight: bold;
+}
+
+.container .row .login .content .inputs .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 12px 0;
+}
+
+.container .row .back-img .shape {
+    position: absolute;
+    border-radius: 12px;
+}
+
+.container .row .back-img .one {
+    left: 0;
+    height: 280px;
+    /* animation: shape-one 3s infinite linear alternate-reverse; */
+}
+
+
+.container .row .back-img .two {
+    bottom: 0;
+    right: 0px;
+    height: 620px;
+    /* animation: shape-two 3s infinite linear alternate-reverse; */
+}
+
+.container .row .back-img .three {
+    top: 0;
+    right: 0;
+    height: 250px;
+}
+
+small{
+    position: relative;
+    bottom: 12px;
+    left: 12px;
+    font-size: 12px;
+}
+
+@keyframes shape-one {
+    from {
+        height: 250px;
+    }
+
+    to {
+        height: 400px;
+    }
+}
+
+@keyframes shape-two {
+    from {
+        height: 620px;
+    }
+
+    to {
+        height: 520px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .container .row .back-img {
+        display: none;
+    }
+
+    .container .row .login {
+        width: 100%;
+        border-radius: 12px;
+
+    }
+
+    .container .row {
+
+        margin: 0 15px;
+    }
+}
