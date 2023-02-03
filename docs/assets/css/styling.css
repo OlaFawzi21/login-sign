@@ -45,9 +45,9 @@
 
 .container .row .login .logo {
     display: flex;
-    justify-content: space-evenly;
     align-items: flex-end;
-    width: 35%;
+    justify-content: space-evenly;
+    width: 170px;
     margin: 20px 0 0 0;
 }
 
@@ -92,14 +92,20 @@
 
 .container .row p {
     font-size: 14px;
+    text-align: center;
+}
+
+.container .row .signup p {
+    display: none;
 }
 
 .container .row .login .content .inputs {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 75%;
 
 }
+
 ::placeholder {
     color: #608a5c;
     font-size: 11px;
@@ -178,7 +184,7 @@
     height: 250px;
 }
 
-small{
+small {
     position: relative;
     bottom: 12px;
     left: 12px;
@@ -214,11 +220,29 @@ small{
     .container .row .login {
         width: 100%;
         border-radius: 12px;
+    }
 
+
+
+    .container .row .signup p {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .container .row .login .content .inputs {
+        width: 90%;
     }
 
     .container .row {
+        margin: 0;
+    }
 
-        margin: 0 15px;
+
+}
+
+@media (max-width:360px) {
+    .container .row .login .content .inputs .remember-forget {
+        flex-direction: column;
     }
 }
