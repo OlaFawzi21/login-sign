@@ -58,7 +58,7 @@
 
                         <label>Repeat password</label>
                         <input type="password" id="rpassword" class="form-control" placeholder="Confirm password"
-                            pattern="^\d{8,20}$" [class.is-invalid]="rpass.invalid && rpass.touched" #rpass="ngModel"
+                            pattern="\w(?!.*\s).{8,20}" [class.is-invalid]="rpass.invalid && rpass.touched" #rpass="ngModel"
                             name="confirmPass" [(ngModel)]="userModel.rpassword" required>
                             <div *ngIf="rpass.errors && rpass.touched">
                                 <small class="text-danger" *ngIf="rpass.errors?.['required']">Confirm Password is required</small>
