@@ -27,7 +27,7 @@
 
                         <label>Password</label>
                         <input type="password" id="password" class="form-control" placeholder="Password"
-                            pattern="\w{8,20}" [class.is-invalid]="pass.invalid && pass.touched" #pass="ngModel"
+                            pattern="\w(?!.*\s).{8,20}" [class.is-invalid]="pass.invalid && pass.touched" #pass="ngModel"
                             name="password" [(ngModel)]="userModel.password" required>
                         <div *ngIf="pass.errors && pass.touched">
                             <small class="text-danger" *ngIf="pass.errors?.['required']">Password is required</small>
