@@ -39,7 +39,7 @@
 
                         <label>Email</label>
                         <input type="email" id="email" class="form-control" placeholder="address@email.com"
-                            pattern="^[a-z0-9](\.?[a-z0-9]){5,}@gmail\.com$"
+                            pattern="^w(\.?\w){2,}@[a-z]{2,10}\.com$"
                             [class.is-invalid]="email.invalid && email.touched" #email="ngModel" name="email"
                             [(ngModel)]="userModel.email" required>
                         <div *ngIf="email.errors && email.touched">
@@ -49,7 +49,7 @@
 
                         <label>Password</label>
                         <input type="password" id="password" class="form-control" placeholder="Password"
-                            pattern="\w(?!.*\s).{8,20}" [class.is-invalid]="pass.invalid && pass.touched" #pass="ngModel"
+                            pattern="\S{8,}" [class.is-invalid]="pass.invalid && pass.touched" #pass="ngModel"
                             name="password" [(ngModel)]="userModel.password" required>
                         <div *ngIf="pass.errors && pass.touched">
                             <small class="text-danger" *ngIf="pass.errors?.['required']">Password is required</small>
@@ -58,7 +58,7 @@
 
                         <label>Repeat password</label>
                         <input type="password" id="rpassword" class="form-control" placeholder="Confirm password"
-                            pattern="\w(?!.*\s).{8,20}" [class.is-invalid]="rpass.invalid && rpass.touched" #rpass="ngModel"
+                            pattern="\S{8,}" [class.is-invalid]="rpass.invalid && rpass.touched" #rpass="ngModel"
                             name="confirmPass" [(ngModel)]="userModel.rpassword" required>
                             <div *ngIf="rpass.errors && rpass.touched">
                                 <small class="text-danger" *ngIf="rpass.errors?.['required']">Confirm Password is required</small>
